@@ -235,6 +235,127 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/27/C语言关键字/" itemprop="url">
+                  C语言关键字
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-27T00:00:10+08:00" content="2016-07-27">
+              2016-07-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###const<br>const是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。</p>
+<p>####(一)const修饰参数。const只能修饰输入参数。</p>
+<ol>
+<li>如果输入参数是指针型的，用const修饰可以防止指针被意外修改。</li>
+<li>如果参数采用值传递的方式，无需const，因为函数自动产生临时变量复制该参数。</li>
+<li>非内部数据类型的参数，需要临时对象复制参数，而临时对象的构造，析构，复制较为费时，因此建议采用前加const的引用方式传递非内部数据类型。而内部数据类型无需引用传递。</li>
+</ol>
+<p>####(二)const修饰函数返回值。</p>
+<ol>
+<li>函数返回const指针，表示该指针不能被改动，只能把该指针赋给const修饰的同类型指针变量。</li>
+<li>函数返回值为值传递，函数会把返回值赋给外部临时变量，用const无意义！不管是内部还是非内部数据类型。</li>
+<li>函数采用引用方式返回的场合不多，只出现在类的赋值函数中，目的是为了实现链式表达。</li>
+</ol>
+<p>####(三)const+成员函数。<br>任何不修改数据成员的函数都应该声明为const类型，如果const成员函数修改了数据成员或者调<br>用了其他函数修改数据成员，编译器都将报错！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">class stack</div><div class="line">&#123;</div><div class="line">public:</div><div class="line">int GetCount(void) const ;</div><div class="line">private:</div><div class="line">int m_num;</div><div class="line">&#125;;</div><div class="line">int stack::GetCount(void) const</div><div class="line">&#123;</div><div class="line">m_num++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>编译器输出错误信息：<code>error C2166: l-value specifies const object</code></p>
+<p>####(四)const 修饰变量，表示该变量不能被修改。</p>
+<ol>
+<li>const char *p 表示 指向的内容不能改变</li>
+<li>char * const p，就是将P声明为常指针，它的地址不能改变，是固定的，但是它的内容可以改变。</li>
+<li><p>这种const指针是前两种的结合,使得指向的内容和地址都不能发生变化.</p>
+<pre><code>const double pi = 3.14159;
+const double *const pi_ptr = &amp;pi;
+</code></pre></li>
+<li><p>const对象默认为局部变量，一个非const变量如果做了合适的声明就可以在另外的文件中被使用；在全局作用域声明的const变量不能被其他文件访问，通过指定const变量为extern，才能在其他文件中使用。</p>
+<pre><code>extern const int buf=1024；
+</code></pre></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/25/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -357,7 +478,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
