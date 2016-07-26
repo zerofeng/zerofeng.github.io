@@ -84,34 +84,28 @@
 
 
 
-<meta name="description" content="##const
-const是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。
-###(一)const修饰参数。const只能修饰输入参数。
-
+<meta name="description" content="constconst是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。
+(一)const修饰参数。const只能修饰输入参数。
 如果输入参数是指针型的，用const修饰可以防止指针被意外修改。
 如果参数采用值传递的方式，无需const，因为函数自动产生临时变量复制该参数。
-非内部数">
+非内部数据类型的参数，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言关键字">
 <meta property="og:url" content="http://yoursite.com/2016/07/27/C语言关键字/index.html">
 <meta property="og:site_name" content="zerofeng’s blog">
-<meta property="og:description" content="##const
-const是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。
-###(一)const修饰参数。const只能修饰输入参数。
-
+<meta property="og:description" content="constconst是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。
+(一)const修饰参数。const只能修饰输入参数。
 如果输入参数是指针型的，用const修饰可以防止指针被意外修改。
 如果参数采用值传递的方式，无需const，因为函数自动产生临时变量复制该参数。
-非内部数">
-<meta property="og:updated_time" content="2016-07-26T16:55:01.000Z">
+非内部数据类型的参数，">
+<meta property="og:updated_time" content="2016-07-26T17:08:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言关键字">
-<meta name="twitter:description" content="##const
-const是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。
-###(一)const修饰参数。const只能修饰输入参数。
-
+<meta name="twitter:description" content="constconst是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。
+(一)const修饰参数。const只能修饰输入参数。
 如果输入参数是指针型的，用const修饰可以防止指针被意外修改。
 如果参数采用值传递的方式，无需const，因为函数自动产生临时变量复制该参数。
-非内部数">
+非内部数据类型的参数，">
 
 
 
@@ -294,26 +288,21 @@ const是C语言的一种关键字，起受保护，防止以外的变动的作�
       
 
       
-        <p>##const</p>
-<p>const是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。</p>
-<p>###(一)const修饰参数。const只能修饰输入参数。</p>
-<ol>
+        <h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>const是C语言的一种关键字，起受保护，防止以外的变动的作用！可以修饰变量，参数，返回值,甚至函数体。const可以提高程序的健壮性，你只管用到你想用的任何地方。</p>
+<h3 id="一-const修饰参数。const只能修饰输入参数。"><a href="#一-const修饰参数。const只能修饰输入参数。" class="headerlink" title="(一)const修饰参数。const只能修饰输入参数。"></a>(一)const修饰参数。const只能修饰输入参数。</h3><ol>
 <li>如果输入参数是指针型的，用const修饰可以防止指针被意外修改。</li>
 <li>如果参数采用值传递的方式，无需const，因为函数自动产生临时变量复制该参数。</li>
 <li>非内部数据类型的参数，需要临时对象复制参数，而临时对象的构造，析构，复制较为费时，因此建议采用前加const的引用方式传递非内部数据类型。而内部数据类型无需引用传递。</li>
 </ol>
-<p>###(二)const修饰函数返回值。</p>
-<ol>
+<h3 id="二-const修饰函数返回值。"><a href="#二-const修饰函数返回值。" class="headerlink" title="(二)const修饰函数返回值。"></a>(二)const修饰函数返回值。</h3><ol>
 <li>函数返回const指针，表示该指针不能被改动，只能把该指针赋给const修饰的同类型指针变量。</li>
 <li>函数返回值为值传递，函数会把返回值赋给外部临时变量，用const无意义！不管是内部还是非内部数据类型。</li>
 <li>函数采用引用方式返回的场合不多，只出现在类的赋值函数中，目的是为了实现链式表达。</li>
 </ol>
-<p>###(三)const+成员函数。</p>
-<p>任何不修改数据成员的函数都应该声明为const类型，如果const成员函数修改了数据成员或者调<br>用了其他函数修改数据成员，编译器都将报错！</p>
+<h3 id="三-const-成员函数。"><a href="#三-const-成员函数。" class="headerlink" title="(三)const+成员函数。"></a>(三)const+成员函数。</h3><p>任何不修改数据成员的函数都应该声明为const类型，如果const成员函数修改了数据成员或者调<br>用了其他函数修改数据成员，编译器都将报错！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">class stack</div><div class="line">&#123;</div><div class="line">public:</div><div class="line">int GetCount(void) const ;</div><div class="line">private:</div><div class="line">int m_num;</div><div class="line">&#125;;</div><div class="line">int stack::GetCount(void) const</div><div class="line">&#123;</div><div class="line">m_num++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>编译器输出错误信息：<code>error C2166: l-value specifies const object</code></p>
-<p>###(四)const 修饰变量，表示该变量不能被修改。</p>
-<ol>
+<h3 id="四-const-修饰变量，表示该变量不能被修改。"><a href="#四-const-修饰变量，表示该变量不能被修改。" class="headerlink" title="(四)const 修饰变量，表示该变量不能被修改。"></a>(四)const 修饰变量，表示该变量不能被修改。</h3><ol>
 <li>const char *p 表示 指向的内容不能改变</li>
 <li>char * const p，就是将P声明为常指针，它的地址不能改变，是固定的，但是它的内容可以改变。</li>
 <li><p>这种const指针是前两种的结合,使得指向的内容和地址都不能发生变化.</p>
@@ -468,7 +457,7 @@ const double *const pi_ptr = &amp;pi;
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-const修饰参数。const只能修饰输入参数。"><span class="nav-number">1.1.</span> <span class="nav-text">(一)const修饰参数。const只能修饰输入参数。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-const修饰函数返回值。"><span class="nav-number">1.2.</span> <span class="nav-text">(二)const修饰函数返回值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-const-成员函数。"><span class="nav-number">1.3.</span> <span class="nav-text">(三)const+成员函数。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-const-修饰变量，表示该变量不能被修改。"><span class="nav-number">1.4.</span> <span class="nav-text">(四)const 修饰变量，表示该变量不能被修改。</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
